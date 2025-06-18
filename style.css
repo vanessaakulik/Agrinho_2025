@@ -1,0 +1,156 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000080; /* Azul Marinho */
+    color: #FFFFFF; /* Branco */
+    line-height: 1.6;
+    animation: fadeIn 1s ease-in-out;
+    overflow-x: hidden; /* Evita barra de rolagem horizontal devido aos enfeites */
+    position: relative; /* Para posicionar os enfeites absolutos */
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes float {
+    0% { transform: translateY(0px) rotate(0deg); opacity: 0.8; }
+    50% { transform: translateY(-20px) rotate(5deg); opacity: 1; }
+    100% { transform: translateY(0px) rotate(0deg); opacity: 0.8; }
+}
+
+/* Estilo dos Enfeites Flutuantes */
+.enfeite {
+    position: absolute;
+    font-size: 2.5em; /* Tamanho maior para os emojis */
+    opacity: 0.8;
+    animation: float 5s ease-in-out infinite alternate; /* Animação de flutuação */
+    z-index: -1; /* Fica atrás do conteúdo */
+}
+
+/* Posições e atrasos de animação para os enfeites */
+.enfeite-1 { top: 10%; left: 5%; animation-delay: 0s; }
+.enfeite-2 { top: 25%; right: 8%; animation-delay: 1s; }
+.enfeite-3 { top: 40%; left: 12%; animation-delay: 2s; }
+.enfeite-4 { top: 60%; right: 3%; animation-delay: 3s; }
+.enfeite-5 { top: 80%; left: 7%; animation-delay: 4s; }
+
+
+header {
+    background-color: #000066; /* Um tom um pouco mais escuro de azul marinho para o cabeçalho */
+    color: #FFFFFF;
+    padding: 2em 0;
+    text-align: center;
+    border-bottom: 2px solid #3366FF; /* Um azul mais vibrante para a borda */
+}
+
+header h1 {
+    margin-bottom: 0.5em;
+    font-size: 2.8em;
+    animation: slideInDown 0.8s ease-out;
+}
+
+header p {
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+main {
+    max-width: 900px;
+    margin: 2em auto;
+    padding: 0 1.5em;
+}
+
+section {
+    background-color: #000099; /* Um azul marinho intermediário para as seções */
+    padding: 2em;
+    margin-bottom: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+h2 {
+    color: #99CCFF; /* Um azul claro para os títulos das seções */
+    text-align: center;
+    margin-bottom: 1.5em;
+    font-size: 2.2em;
+}
+
+.introducao p, .agradecimento p {
+    text-align: justify;
+    font-size: 1.1em;
+}
+
+/* Estilo dos Botões */
+.botoes {
+    text-align: center;
+    margin-top: 2em;
+}
+
+.botao {
+    display: inline-block;
+    background-color: #3366FF; /* Azul vibrante para o botão principal */
+    color: #FFFFFF;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 0 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.botao:hover {
+    background-color: #0047AB; /* Azul mais escuro ao passar o mouse */
+    transform: translateY(-2px);
+}
+
+.botao.secundario {
+    background-color: #6699FF; /* Um azul mais claro para o botão secundário */
+}
+
+.botao.secundario:hover {
+    background-color: #3366CC; /* Azul médio ao passar o mouse no secundário */
+}
+
+
+.caminho-alimentos .passo {
+    background-color: #0000AA; /* Um azul marinho levemente mais claro para os passos */
+    padding: 1.5em;
+    margin-bottom: 1.5em;
+    border-radius: 6px;
+    border-left: 5px solid #6699FF; /* Um azul médio para a borda esquerda */
+}
+
+.caminho-alimentos .passo h3 {
+    color: #CCEEFF; /* Um azul bem claro para os títulos dos passos */
+    margin-top: 0;
+    font-size: 1.6em;
+}
+
+.caminho-alimentos .passo p {
+    text-align: justify;
+    font-size: 1em;
+}
+
+footer {
+    background-color: #000066;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 1.5em 0;
+    margin-top: 3em;
+    border-top: 2px solid #3366FF;
+    font-size: 0.9em;
+}
